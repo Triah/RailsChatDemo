@@ -1,0 +1,7 @@
+<ul>
+	<% ChatRoom.order('updated_at DESC').find_each do |chat_room| %>
+		<li>
+			<%= chat_room.name %>
+		</li>
+	<% end %>
+</ul>

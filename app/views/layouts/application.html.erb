@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <!-- TODO make as shared libs -->
+    <% if session[:current_user_id].present? %>
+      <%= button_to "Log out", logout_path %>
+    <% end %>
+
+    <% flash.each do |type, message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
