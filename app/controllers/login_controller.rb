@@ -3,6 +3,7 @@ class LoginController < ApplicationController
   protect_from_forgery with: :null_session, only: [:create]	
 
   def index
+  	redirect_on_active_session
   end
 
   def login

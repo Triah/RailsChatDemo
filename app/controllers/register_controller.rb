@@ -1,6 +1,7 @@
 class RegisterController < ApplicationController
-	
+
 	def new
+		redirect_on_active_session
 		@user = User.new
 	end
 
